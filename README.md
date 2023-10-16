@@ -1,16 +1,16 @@
 #### Comandos e config para executar API ####
---Executar as migration
+#### Executar as migration
     php spark migrate
 
---Executar servidor 
+#### Executar servidor ####
     php spark serve
 
---Nome da database banco de dados
+#### Nome da database banco de dados ####
     DB_DEV_API
 
--- Nome e senha do usúario da base de datos
+#### Nome e senha do usúario da base de datos ####
     username = postgres
     password = 12345
 
--- Banco de dados utilizado PostgreSQL
+#### Banco de dados utilizado PostgreSQL ####
    DBDriver = postgre 
