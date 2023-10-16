@@ -1,0 +1,459 @@
+ERROR - 2023-10-14 00:29:31 --> ErrorException: pg_query(): Query failed: ERROR:  precision for type float must be less than 54 bits
+LINE 5:  "price" float(100) NOT NULL,
+                       ^ in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'CREATE TABLE "p...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('CREATE TABLE "p...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE "p...')
+#4 C:\teste_api_codeigniter\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE "p...')
+#5 C:\teste_api_codeigniter\app\Database\Migrations\2023-10-14-000543_Products.php(44): CodeIgniter\Database\Forge->createTable('products', true)
+#6 C:\teste_api_codeigniter\system\Database\MigrationRunner.php(877): App\Database\Migrations\Products->up()
+#7 C:\teste_api_codeigniter\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#8 C:\teste_api_codeigniter\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\teste_api_codeigniter\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\teste_api_codeigniter\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\teste_api_codeigniter\spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+CRITICAL - 2023-10-14 17:27:30 --> Call to undefined method App\Controllers\User::genericResponse()
+in APPPATH\Controllers\User.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->create()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+CRITICAL - 2023-10-14 17:28:55 --> Call to undefined method App\Controllers\User::genericResponse()
+in APPPATH\Controllers\User.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->create()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+CRITICAL - 2023-10-14 17:33:09 --> Call to undefined method CodeIgniter\RESTful\ResourceController::genericResponse()
+in APPPATH\Controllers\User.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->create()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+CRITICAL - 2023-10-14 17:33:56 --> Call to undefined method App\Controllers\User::genericResponse()
+in APPPATH\Controllers\User.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->create()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+CRITICAL - 2023-10-14 17:44:22 --> Call to a member function find() on null
+in APPPATH\Controllers\User.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->create()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:05:27 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;products&quot; does not exist
+LINE 1: ...oducts&quot; (&quot;name&quot;, &quot;description&quot;, &quot;amount&quot;, &quot;code&quot;, &quot;created_a...
+                                                             ^ in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:05:27 --> pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;products&quot; does not exist
+LINE 1: ...oducts&quot; (&quot;name&quot;, &quot;description&quot;, &quot;amount&quot;, &quot;code&quot;, &quot;created_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:07:58 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type integer: &quot;8.98&quot;
+LINE 1: ...ated_at&quot;, &quot;updated_at&quot;) VALUES ('Sabão', 'Em pó', '8.98', '5...
+                                                             ^ in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:07:58 --> pg_query(): Query failed: ERROR:  invalid input syntax for type integer: &quot;8.98&quot;
+LINE 1: ...ated_at&quot;, &quot;updated_at&quot;) VALUES ('Sabão', 'Em pó', '8.98', '5...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:08:34 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (1, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:08:34, 2023-10-14 18:08:34). in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:08:35 --> pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (1, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:08:34, 2023-10-14 18:08:34).
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:09:44 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (2, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:09:44, 2023-10-14 18:09:44). in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:09:44 --> pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (2, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:09:44, 2023-10-14 18:09:44).
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:09:57 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (3, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:09:57, 2023-10-14 18:09:57). in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:09:57 --> pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (3, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:09:57, 2023-10-14 18:09:57).
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:10:42 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:10:42, 2023-10-14 18:10:42). in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:10:42 --> pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:10:42, 2023-10-14 18:10:42).
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:11:00 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (5, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:11:00, 2023-10-14 18:11:00). in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:11:00 --> pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (5, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:11:00, 2023-10-14 18:11:00).
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:11:08 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (6, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:11:08, 2023-10-14 18:11:08). in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:11:08 --> pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (6, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:11:08, 2023-10-14 18:11:08).
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:12:00 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (7, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:12:00, 2023-10-14 18:12:00). in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:12:00 --> pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (7, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:12:00, 2023-10-14 18:12:00).
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:12:06 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (8, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:12:06, 2023-10-14 18:12:06). in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:12:06 --> pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (8, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:12:06, 2023-10-14 18:12:06).
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:12:13 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (9, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:12:13, 2023-10-14 18:12:13). in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:12:13 --> pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (9, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:12:13, 2023-10-14 18:12:13).
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:12:54 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (10, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:12:54, 2023-10-14 18:12:54). in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:12:54 --> pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (10, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:12:54, 2023-10-14 18:12:54).
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
+ERROR - 2023-10-14 18:13:14 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (11, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:13:14, 2023-10-14 18:13:14). in C:\teste_api_codeigniter\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\teste_api_co...', 187)
+#1 C:\teste_api_codeigniter\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\teste_api_codeigniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\teste_api_codeigniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\teste_api_codeigniter\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\teste_api_codeigniter\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\teste_api_codeigniter\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#7 C:\teste_api_codeigniter\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\teste_api_codeigniter\app\Controllers\Product.php(32): CodeIgniter\Model->insert(Array)
+#9 C:\teste_api_codeigniter\system\CodeIgniter.php(919): App\Controllers\Product->create()
+#10 C:\teste_api_codeigniter\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#11 C:\teste_api_codeigniter\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\teste_api_codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\teste_api_codeigniter\system\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_co...')
+#14 {main}
+CRITICAL - 2023-10-14 18:13:14 --> pg_query(): Query failed: ERROR:  null value in column &quot;price&quot; of relation &quot;products&quot; violates not-null constraint
+DETAIL:  Failing row contains (11, Sabão, Em pó, null, 1, 54564, 2023-10-14 18:13:14, 2023-10-14 18:13:14).
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO "products" ("name", "description", "amount", "code", "created_at", "updated_at") VALUES (:name:, :description:, :amount:, :code:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Product.php(32): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\teste_api_codeigniter\\public\\index.php')
